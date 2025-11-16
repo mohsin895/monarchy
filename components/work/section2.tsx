@@ -30,9 +30,18 @@ export default function WorkSectionSecond() {
       <div className="max-w-5xl mx-auto mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* CARD 1 */}
         <div className="bg-neutral-900 border border-purple-900/40 hover:border-purple-500/60 rounded-2xl p-6 transition relative overflow-hidden">
-          <h3 className="text-lg font-semibold text-white mb-4">
-            How much can I afford to spend on a car while paying down my student loans?
-          </h3>
+        
+
+          <h3 className="text-lg font-semibold mb-3 text-white flex items-center gap-3">
+          <span>How much can I afford to spend on a car while paying down my student loans?</span>
+          <img
+            src='/wheel.png'
+            alt='How much can I afford to spend on a car while paying down my student loans?'
+            className="h-[220px] w-[200px] object-contain"
+          />
+       
+        
+      </h3>
           <p className="text-gray-400 text-sm leading-relaxed">
             Balancing multiple financial goals can be challenging. Our planners help you evaluate your
             priorities, assess your debt, and determine how much you can spend responsibly on major
@@ -45,8 +54,15 @@ export default function WorkSectionSecond() {
 
         {/* CARD 2 */}
         <div className="bg-neutral-900 border border-purple-900/40 hover:border-purple-500/60 rounded-2xl p-6 transition relative overflow-hidden">
-          <h3 className="text-lg font-semibold text-white mb-4">
-            How much can I spend on a house if I also want to have kids?
+        <h3 className="text-lg font-semibold mb-3 text-white flex items-center gap-3">
+          <span> How much can I spend on a house if I also want to have kids?</span>
+          <img
+            src='/home.png'
+            alt=' How much can I spend on a house if I also want to have kids?'
+            className="h-[220px] w-[200px] object-contain"
+          />
+         
+           
           </h3>
           <p className="text-gray-400 text-sm leading-relaxed">
             Planning for big life milestones takes insight and precision. Our experts help you weigh

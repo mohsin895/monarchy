@@ -1,6 +1,6 @@
 "use client";
 
-export default function WorkHero() {
+export default function TeamHero() {
   return (
     <section className="max-w-7xl mx-auto px-4 py-2 w-full">
       <div className="flex flex-col items-center text-center space-y-6">
@@ -28,7 +28,7 @@ export default function WorkHero() {
             <span className="pl-0 md:pl-1 lg:pl-0 xl:pl-[50px] text-[#727272]">
               Innovation.
             </span>
-            <span className="pl-0 md:pl-1 lg:pl-0 xl:pl-[50px] text-transparent">
+            <span className="pl-0 md:pl-1 lg:pl-0 xl:pl-[50px] bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 bg-clip-text text-transparent">
               Diversity
             </span>
           </h1>

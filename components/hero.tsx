@@ -28,7 +28,7 @@ export default function Hero() {
             <span className="pl-0 md:pl-1 lg:pl-0 xl:pl-[50px] text-[#727272]">
               Confidence.
             </span>
-            <span className="pl-0 md:pl-1 lg:pl-0 xl:pl-[50px] text-transparent">
+            <span className="pl-0  md:pl-1 lg:pl-0 xl:pl-[20px] bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 bg-clip-text text-transparent">
               Control
             </span>
           </h1>

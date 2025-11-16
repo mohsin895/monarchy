@@ -9,6 +9,8 @@ import FinancialFreedom from "@/components/financialFreedom"
 import WhyNeedUs from "@/components/whyNeedUs"
 import HelpingYouRealise from "@/components/HelpingYouRealise"
 import FloatingCards from "@/components/FloatingCards"
+import Approach from "@/components/apporach"
+import Possibility from "@/components/possiblity"
 
 
 
@@ -21,7 +23,9 @@ export default function Home() {
       <HelpingYouRealise />
       <WhyNeedUs/>
       <FinancialFreedom />
-      {/* <FloatingCards /> */}
+      <Possibility/>
+      <Approach/>
+   
       <Secure/>
       <Showcase />
      

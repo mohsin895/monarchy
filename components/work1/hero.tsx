@@ -1,6 +1,6 @@
 "use client";
 
-export default function WorkHero() {
+export default function CultureHero() {
   return (
     <section className="max-w-7xl mx-auto px-4 py-2 w-full">
       <div className="flex flex-col items-center text-center space-y-6">

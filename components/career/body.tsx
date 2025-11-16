@@ -1,50 +1,88 @@
 "use client";
 
+import { useEffect, useState } from "react";
 export default function CareerBody() {
+  const [perks, setPerks] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchPerks = async () => {
+      try {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/monarch/perk`);
+        const json = await res.json();
+
+        if (Array.isArray(json.data)) {
+          const formatted = json.data.map((item: any) => ({
+            ...item,
+            image: item.image
+              ? `${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}${item.image}`
+              : null,
+          }));
+          setPerks(formatted);
+        } else {
+          console.warn("Unexpected API response:", json);
+        }
+      } catch (err) {
+        console.error("Error fetching perks:", err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchPerks();
+  }, []);
+
+  if (loading) {
+    return (
+      <section className="flex justify-center items-center py-10 text-gray-400">
+        Loading benefits...
+      </section>
+    );
+  }
+
+  if (perks.length === 0) {
+    return (
+      <section className="flex justify-center items-center py-10 text-gray-400">
+        No benefits available.
+      </section>
+    );
+  }
   return (
     <section className="relative w-full bg-black text-white font-sans py-20 px-6 overflow-hidden">
       <div className="max-w-5xl mx-auto space-y-20">
         {/* ------------------ THE PERKS ------------------ */}
         <div>
-          <h2 className="text-3xl font-bold mb-12 text-purple-400">The Perks</h2>
+          <h2 className="text-5xl font-bold mb-12 ">The <span className="text-[#917EE0]">Perks</span></h2>
 
           {/* Perks Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Everyone has a positive voice.",
-                desc: "Innovation doesn’t limit ideas. We have a transparent, open, and connected culture.",
-              },
-              {
-                title: "We’re Positive. You’ll love it!",
-                desc: "Our working spirit is lively. We care about your creativity, comfort, and collaboration.",
-              },
-              {
-                title: "We’re Flexible!",
-                desc: "We allow flexible work time and spaces so you can balance life and work seamlessly.",
-              },
-              {
-                title: "Make your move.",
-                desc: "Our team is inspired by big ideas — where your next move helps shape the future of culture.",
-              },
-              {
-                title: "All Inclusive.",
-                desc: "We support fairness and inclusion. Our culture celebrates diversity and individuality.",
-              },
-              {
-                title: "We’ve Got You Covered.",
-                desc: "Our benefits include healthcare, great perks, and financial support for your goals.",
-              },
-            ].map((perk, index) => (
-              <div
-                key={index}
-                className="bg-[#141432] border border-purple-500/20 rounded-xl p-6 shadow-[0_0_25px_rgba(138,43,226,0.2)] hover:shadow-[0_0_25px_rgba(138,43,226,0.4)] transition-all"
-              >
-                <h3 className="text-lg font-semibold mb-3 text-white">{perk.title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">{perk.desc}</p>
-              </div>
-            ))}
+  {perks.map((perk, index) => (
+    <div
+      key={index}
+      className="bg-dark border border-[#191919] rounded-xl p-6  transition-all"
+    >
+      <h3 className="text-lg font-semibold mb-3 text-white flex items-center gap-3">
+        {perk.image ? (
+          <img
+            src={perk.image}
+            alt={perk.title}
+            className="h-12 w-12 object-contain"
+          />
+        ) : (
+          <div className="h-12 w-12 bg-gray-700 rounded flex items-center justify-center text-xs text-gray-300">
+            no img
           </div>
+        )}
+        <span>{perk.title}</span>
+      </h3>
+
+      <p className="text-gray-400 text-sm leading-relaxed">
+        {perk.description}
+      </p>
+    </div>
+  ))}
+</div>
+
         </div>
 
         {/* ------------------ OPEN POSITIONS ------------------ */}

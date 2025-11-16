@@ -6,15 +6,16 @@ import './globals.css';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import FooterTop from "@/components/footerTop"
+import TitleUpdater from "@/components/TitleUpdater";
 
 const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: 'App',
-  description: 'Created with React',
-  generator: 'React.app',
-}
+// export const metadata: Metadata = {
+//   title: 'App',
+//   description: 'Created with React',
+//   generator: 'React.app',
+// }
 
 export default function RootLayout({
   children,
@@ -25,6 +26,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`font-sans antialiased bg-black text-white`}>
         {/* Global Header */}
+        <TitleUpdater />
         <Header />
 
         {/* Page Content */}

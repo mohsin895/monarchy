@@ -5,6 +5,7 @@ import AboutFooter from "@/components/about/footer"
 
 import CareerHero from "@/components/career/hero"
 import CareerBody from "@/components/career/body"
+import Showcase from "@/components/showcase"
 
 
 export default function Career() {
@@ -14,8 +15,7 @@ export default function Career() {
       <CareerHero />
       <CareerBody />
     
-     
-      <AboutFooter />
+      <Showcase />
      
     
     </main>

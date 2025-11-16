@@ -8,7 +8,7 @@ export default function FinancialFreedom() {
         {/* --- Left Side Image --- */}
         <div className="relative flex justify-center lg:justify-start pl-0 lg:pl-30">
           <img
-            src="/financial.png"
+            src="/posibilites.png"
             alt="Financial Growth Illustration"
             className="w-[200px] sm:w-[260px] md:w-[320px] lg:w-[380px] xl:w-[420px] h-auto rounded-2xl shadow-lg transition-all duration-300"
           />
@@ -18,13 +18,13 @@ export default function FinancialFreedom() {
         <div className="text-center lg:text-left space-y-4 px-2 lg:pr-12">
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold leading-snug">
             Helping you realise <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+            <span className="">
               the possibilities.
             </span>
           </h2>
 
           <p className="text-gray-400 max-w-md mx-auto lg:mx-0 text-xs sm:text-sm md:text-base leading-relaxed">
-            Though achieving financial freedom is not that difficult, you need someone to take you there.
+            Though making 100 crores is not a myth, you need someone to take you there
           </p>
         </div>
 

@@ -2,7 +2,7 @@
 
 export default function SupportHero() {
   return (
-    <section className="max-w-7xl mx-auto px-4 py-2 w-full">
+    <section className="max-w-8xl mx-auto px-4 py-2 w-full">
       <div className="flex flex-col items-center text-center space-y-6">
         
         {/* Full-width heading container */}
@@ -10,6 +10,8 @@ export default function SupportHero() {
           <h1
             className="
               max-w-7xl
+              mt-6
+              lg:mt-6
               font-bold 
               bg-clip-text 
               bg-gradient-to-r 
@@ -17,8 +19,8 @@ export default function SupportHero() {
               to-blue-400 
               text-balance 
               leading-tight
-              text-3xl 
-              sm:text-4xl 
+              text-[15px] 
+              sm:text-3xl 
               md:text-5xl 
               lg:text-6xl 
               xl:text-7xl
@@ -28,9 +30,9 @@ export default function SupportHero() {
             <span className=" text-[#727272]">
               Innovation.
             </span>
-            <span className=" text-transparent">
-              Diversity
-            </span>
+            <span className="bg-gradient-to-r from-cyan-400 via-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+  Diversity<span className="text-green-400 ">.</span>
+</span>
           </h1>
         </div>
 

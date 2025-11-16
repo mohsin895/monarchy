@@ -13,7 +13,7 @@ export default function WhyNeedUs() {
 
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold leading-snug">
             The{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+            <span className="">
               life
             </span>{" "}
             you want.

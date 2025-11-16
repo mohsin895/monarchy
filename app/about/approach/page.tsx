@@ -3,6 +3,8 @@
 import AboutBody from "@/components/about/body"
 import AboutFooter from "@/components/about/footer"
 import ApproachBody from "@/components/approach/body"
+import ApproachHero from "@/components/approach/hero"
+import Showcase from "@/components/showcase"
 
 
 import WorkHero from "@/components/work/hero"
@@ -13,13 +15,13 @@ import WorkHero from "@/components/work/hero"
 
 export default function Team() {
   return (
-    <main className="min-h-screen bg-black">
+    <main className=" bg-black">
      
-      <WorkHero />
+      <ApproachHero />
       <AboutBody/>
       <ApproachBody/>
       
-      <AboutFooter />
+      <Showcase />
     
     </main>
   )

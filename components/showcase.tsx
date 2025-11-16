@@ -1,16 +1,15 @@
 "use client";
 
+import { useState } from "react";
+import { MultiStepFormModal } from "./multiStepForm/multi-step-form";
 export default function Showcase() {
+  const [isOpen, setIsOpen] = useState(false)
   return (
-    <section className="relative bg-black text-white py-12 px-6 flex flex-col items-center justify-center min-h-screen">
+    <section className="relative bg-black text-white py-12 px-6 flex flex-col items-center justify-center ">
       
       {/* Floating image container */}
       <div className="relative w-[300px] md:w-[245px] mb-6 flex flex-col items-center">
-        <img
-          src="/image-2.png" // replace with your image path
-          alt="FAQ Preview"
-          className="border border-gray-700 shadow-2xl "
-        />
+      
         <h2 className="text-2xl md:text-4xl lg:text-[35px] font-extrabold text-white text-center mt-4">
           It’s not Luck!!
         </h2>
@@ -30,9 +29,11 @@ export default function Showcase() {
         </p>
 
         {/* Button */}
-        <button className="inline-flex items-center gap-2 bg-white text-black text-xs md:text-sm font-semibold px-4 py-3 rounded-lg rounded-br-3xl hover:bg-gray-200 transition">
-          Talk to an Expert
+        <button onClick={() => setIsOpen(true)} className="inline-flex items-center gap-2 bg-white text-black text-xs md:text-sm font-semibold px-4 py-3 rounded-lg rounded-br-3xl hover:bg-gray-200 transition">
+         Join us now
         </button>
+
+        <MultiStepFormModal open={isOpen} onOpenChange={setIsOpen} />
       </div>
       
     </section>

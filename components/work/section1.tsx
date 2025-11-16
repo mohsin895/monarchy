@@ -23,16 +23,16 @@ export default function WorkSectionFirst() {
 
         {/* ---------- RIGHT SIDE (4 IMAGES GRID) ---------- */}
         <div className="grid grid-cols-2 gap-6">
-          <div className="bg-neutral-900 rounded-xl p-4 flex justify-center items-center border border-purple-900/40 hover:border-purple-500/60 transition">
+          <div className="bg-neutral-900 rounded-xl p-0 flex justify-center items-center border border-purple-900/40 hover:border-purple-500/60 transition">
             <img src="/group-1.png" alt="Family planning" className="rounded-lg w-full h-auto" />
           </div>
-          <div className="bg-neutral-900 rounded-xl p-4 flex justify-center items-center border border-purple-900/40 hover:border-purple-500/60 transition">
+          <div className="bg-neutral-900 rounded-xl p-0 flex justify-center items-center border border-purple-900/40 hover:border-purple-500/60 transition">
             <img src="/group-2.png" alt="Car goal" className="rounded-lg w-full h-auto" />
           </div>
-          <div className="bg-neutral-900 rounded-xl p-4 flex justify-center items-center border border-purple-900/40 hover:border-purple-500/60 transition">
+          <div className="bg-neutral-900 rounded-xl p-0 flex justify-center items-center border border-purple-900/40 hover:border-purple-500/60 transition">
             <img src="/group-3.png" alt="Investment" className="rounded-lg w-full h-auto" />
           </div>
-          <div className="bg-neutral-900 rounded-xl p-4 flex justify-center items-center border border-purple-900/40 hover:border-purple-500/60 transition">
+          <div className="bg-neutral-900 rounded-xl p-0 flex justify-center items-center border border-purple-900/40 hover:border-purple-500/60 transition">
             <img src="/group-4.png" alt="Retirement" className="rounded-lg w-full h-auto" />
           </div>
         </div>
